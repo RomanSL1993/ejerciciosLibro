@@ -1,0 +1,3 @@
+Este es un archivo con codificación utf-8
+éste es Beta: ß
+estos son letras con acento: áéíóú
