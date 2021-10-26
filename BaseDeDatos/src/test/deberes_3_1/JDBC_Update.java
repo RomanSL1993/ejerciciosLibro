@@ -15,13 +15,13 @@ public class JDBC_Update {
 
 	public static void main(String[] args) {
 
-		String basedatos = "prueba";
+		String basedatos = "bd_ciclismo";
 		String host = "localhost";
 		String port = "3306";
 		String parAdic = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 		String urlConnection = "jdbc:mysql://" + host + ":" + port + "/" + basedatos + parAdic;
-		String user = "Roman";
-		String pwd = "1234";
+		String user = "root";
+		String pwd = "";
 
 		try (Connection c = DriverManager.getConnection(urlConnection, user, pwd); Statement s = c.createStatement()) {
 
@@ -31,7 +31,8 @@ public class JDBC_Update {
 					+ "('89012345E','ROJAS', null),"
 					+ "('56789012B','SAMPER','29730')");
 
-			System.out.println(nFil + " Filas insertadas.");
+			System.out.println(nFil + " Filas in"
+					+ "sertadas.");
 
 		} catch (SQLException e) {
 			muestraErrorSQL(e);

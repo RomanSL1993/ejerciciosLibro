@@ -1,6 +1,6 @@
-package BaseDeDatos.src.test.deberes_3_2;
+package BaseDeDatos.src.main.java;
 
-//Hecho por Roman Shulyak
+//8
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -35,14 +35,7 @@ public class JDBC_select {
         System.out.println("[" + (i++) + "]");        
         System.out.println("DNI: " + rs.getString("DNI"));
         System.out.println("Apellidos: " + rs.getString("APELLIDOS"));
-        System.out.println("CP: " + rs.getInt("CP"));
-        System.out.println();
-        /*
-         * Si se usa getInt() deberia dar como válida la ejecución, ya que al parsearlo no detecta letras
-         * El getString() siempre va a funcionar porque lo convierte todo en letras y lo lee
-         * 
-         * Solución: efectivamente funciona con el getInt(), y un ejemplo claro es que convierte el null en 0;
-         */
+        System.out.println("CP: " + rs.getString("CP"));
       }
 
     } catch (SQLException e) {
